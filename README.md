@@ -1,6 +1,6 @@
 # GoogleCloud_Workstation_Setup_Guidance
 
-This is a guidance on how to set up google cloud linux workstation with GPU and remote using Sunshine/Moonlight and deploy NTU Mecatron software stack on this workstation. 
+This is a guidance on how to set up google cloud linux workstation with GPU and remote using Sunshine+Moonlight+Tailscale and deploy NTU Mecatron software stack on this workstation. 
 
 ## 1. Create a Google Cloud account
 
@@ -52,6 +52,7 @@ gcloud compute ssh test-workstation
 ```
 
 #### 2.1.1 A possible issue
+
 An issue you might face while creating a Google Cloud workstation instance:
 ```bash
  https://docs.cloud.google.com/compute/docs/virtual-workstation/linux-gpu
@@ -74,10 +75,12 @@ Try your request in another zone, or view documentation on how to increase quota
 ```
 
 #### 2.1.2. The cause
+
 By default, new Google Cloud projects start with a GPU quota limit of 0.0 (both globally and regionally) to prevent accidental high-cost usage or abuse. To build your Linux virtual workstation using GPUs, you must manually request a quota increase. You have to upgrade your account from Free Trial to Full Account. Don't worry, Google Cloud will deduct your existing free credits first before touching your own money. 
 
 #### 2.1.3. A solution
-Follow these steps in the Google Cloud Console to request more quota [cite: 1.1.3]:
+
+Follow these steps in the Google Cloud Console to request more quota:
 - Open the Google Cloud Console.
 - Navigate to IAM & Admin > Quotas (or search for "Quotas" in the top search bar).
 - At the top filter bar, clear existing filters if needed, and look for the Filter box. Enter GPUS_ALL_REGIONS and press Enter.(Note: Depending on the specific guide you are following, you may also need to check for specific regional GPU metrics like NVIDIA_T4_GPUS or NVIDIA_L4_GPUS depending on what kind of GPU the workstation script requests).  
@@ -87,6 +90,10 @@ Follow these steps in the Google Cloud Console to request more quota [cite: 1.1.
 - Click Submit request.
 
 Approval time might be varied, but I get approved within 5 mins. 
+
+### 2.2. Install base libraries inside the workstation
+
+Update the software repositories:
 
 
 
