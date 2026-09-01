@@ -95,9 +95,42 @@ Approval time might be varied, but I get approved within 5 mins.
 
 Update the software repositories:
 
+```bash
+sudo apt update
+```
 
+Install the base components: 
+```bash
+sudo apt install -y build-essential
+sudo apt install -y libvulkan1
+```
 
+Update the gcc version for the NVIDIA driver:
+```bash
+sudo apt install -y gcc-12
+sudo apt install -y linux-headers-$(uname -r)
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 12
+sudo update-alternatives --config gcc
+```
 
+Installing NVDIA RTX Virtual Workstation driver and NVIDIA CUDA Toolkit:
+```bash
+curl -L https://storage.googleapis.com/compute-gpu-installation-us/installer/latest/cuda_installer.pyz --output cuda_installer.pyz
+sudo python3 cuda_installer.pyz install_driver # This might restart your compute instance
+sudo python3 cuda_installer.pyz install_cuda 
+sudo reboot
+```
+
+### 2.3. Install the desktop environment
+
+In my case, I use kubuntu-desktop instead of ubuntu-desktop, but you can choose whichever you want to use. Google said that kubuntu-desktop gives better rendering performance, so I stick with it:
+
+```bash
+sudo apt update
+sudo apt -y install kubuntu-desktop
+sudo apt -y install dialog
+sudo reboot
+```
 
 
 
