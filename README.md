@@ -12,7 +12,7 @@ For first time user, you will get 300 USD dollar in credits (which is a lot).
 
 After getting inside the Google Cloud, you have to create a project (or it is automatially created on first time sign in). Then you have to navigate to the Cloud Shell, basically another terminal, to proceed with our setup. You can open this by clicking the shell icon on top right corner of the window, or you can just click G + S. 
 
-When creating a workstation with GPU capability, we need to care about what type of machines we are going to use, how much persistent disk storage we are going too allocated, and the OS.
+When creating a workstation with GPU capability, we need to care about what type of machines we are going to use, how much persistent disk storage we are going to allocated, and the OS.
 
 - To check the list of registered server regions and what types of machines available for each regions, please follow this [link](https://docs.cloud.google.com/compute/docs/regions-zones#available). 
 - To check the list of machines, please follow this [link](https://docs.cloud.google.com/compute/docs/machine-resource).
