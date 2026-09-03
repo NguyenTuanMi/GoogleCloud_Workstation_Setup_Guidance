@@ -148,7 +148,7 @@ Similarly for your laptop/PC.
 
 Sunshine must be setup on your host/server machine (in this case, its the virtual workstation), and moonlight must be installed on the client machines so you can remote desktop to Sunshine. 
 
-On your laptop/PC, follow this guidance to install moonlight: 
+On your laptop/PC, follow this guidance to install moonlight: https://github.com/moonlight-stream/moonlight-docs/wiki/Setup-Guide
 
 On the Virtual Workstation, install Sunshine: 
 ```bash
