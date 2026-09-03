@@ -368,4 +368,4 @@ systemctl --user restart sunshine
 journalctl --user -u sunshine -f
 ```
 
-If this doc lhas any issues, you are welcome to open an issue/PR.  
+If this doc has any issues, you are welcome to open an issue/PR.  
